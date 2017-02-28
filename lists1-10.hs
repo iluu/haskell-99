@@ -31,3 +31,9 @@ myLength xs = case xs of [] -> 0
 myReverse :: [a] -> [a]
 myReverse xs = case xs of [] -> []
                           (y:ys) -> myReverse ys ++ [y]
+
+-- Problem 6: Find if the list is a palindrome
+isPalindrome :: (Eq a) => [a] -> Bool
+isPalindrome [] = True
+isPalindrome [_] = True
+isPalindrome (x:ys) = if x == last(ys) then isPalindrome(init ys) else False
